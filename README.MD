@@ -1,10 +1,12 @@
 # VRChat WhereAmI
 
+Nyallo :3 
+
 This program creates a local dynamic web page showing the current VRC map that the user is in.
 
 ## Depedencies
 
-This requires you to get your VRChat Authentication cookie. details below!
+This requires you to get your VRChat Authentication cookie. I show you how to below!
 
 This also requires nodejs installed on your machine https://nodejs.org/en/download/
 
