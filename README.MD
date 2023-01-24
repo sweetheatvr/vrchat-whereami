@@ -4,8 +4,9 @@ This program creates a local dynamic web page showing the current VRC map that t
 
 ## Depedencies
 
-This requires you to get your VRChat Authentication cookie. details below
-This requires nodejs installed on your machine https://nodejs.org/en/download/
+This requires you to get your VRChat Authentication cookie. details below!
+
+This also requires nodejs installed on your machine https://nodejs.org/en/download/
 
 ## Setup
 
