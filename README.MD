@@ -14,7 +14,8 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 1. download this project somewhere!
 2. navigate to the project directory in cmd prompt
 3. run 'npm install' to install everthing
-4. run 'node index.js authcookie_abcd' where authcookie_abcd is your authentication cookie (see section below for getting auth cookie). 
+4. run 'node index.js authcookie_abcd' 
+   where authcookie_abcd is your authentication cookie (see section below for getting auth cookie). 
 ```
 
 ## Getting your authentication cookie:
