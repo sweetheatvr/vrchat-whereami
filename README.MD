@@ -34,7 +34,7 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 5. copy everything after '?authToken=' (for example: 'authcookie_abcd...')
 6. this is your authentication cookie
 ```
-![image](https://user-images.githubusercontent.com/105096300/214435978-ec1f1b81-62ae-4865-a337-97923a997edb.png)
+![image](https://user-images.githubusercontent.com/105096300/214447088-5b9dbaf4-06c5-4e5d-93f4-5b84fb432dae.png)
 
 ___
 ___
