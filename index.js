@@ -17,7 +17,7 @@ const express = require('express');
 const app = express();
 const server = http.createServer(app);
 
-var cookie = process.argv;
+var cookie = process.argv[2];
 
 //create new socket io server nya cool!
 const io = new Server(server)
@@ -47,7 +47,6 @@ vrchatClient.on('connect', function(vrcConnection) {
     console.log('VRChat WebSocket Client Connected');
 
     vrcConnection.on('message', function(result) {
-        
         if (result.type === 'utf8') {
 
             var json = JSON.parse(result.utf8Data);
