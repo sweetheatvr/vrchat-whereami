@@ -46,15 +46,22 @@ vrchatClient.on('connect', function(vrcConnection) {
 
     console.log('VRChat WebSocket Client Connected');
 
+    //When VRChat sends the user a message
     vrcConnection.on('message', function(result) {
         if (result.type === 'utf8') {
 
             var json = JSON.parse(result.utf8Data);
 
             if (json.type == "user-location"){
-                var test = json.content;
-                world = test.substring(test.indexOf('"name":')+8,test.indexOf('","description"'));
+
+                var message = json.content;
+                
+                //booty parsing becuase the json is not well formed
+                world = message.substring(message.indexOf('"name":')+8,message.indexOf('","description"'));
+
                 console.log("Current World: " + world);
+
+                //send world name to all clients listening
                 io.emit('world-received', world);
             }
         }
