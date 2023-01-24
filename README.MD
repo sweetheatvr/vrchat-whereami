@@ -35,3 +35,11 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 6. this is your authentication cookie
 ```
 ![image](https://user-images.githubusercontent.com/105096300/214435978-ec1f1b81-62ae-4865-a337-97923a997edb.png)
+
+# Streamlab settings 
+
+## Browser Source
+![image](https://user-images.githubusercontent.com/105096300/214440399-14634165-47d9-4121-89b6-26a0297e758d.png)
+
+## Filter (Color Key)
+![image](https://user-images.githubusercontent.com/105096300/214440520-c223f098-01fe-4028-acab-c64574216f63.png)
