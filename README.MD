@@ -1,6 +1,6 @@
 # VRChat WhereAmI
 
-Nyallo :3 
+Nyallo! :3 
 
 This program creates a local dynamic web page showing the current VRC map that the user is in.
 
