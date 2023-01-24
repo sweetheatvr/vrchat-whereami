@@ -11,19 +11,19 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 ## Setup
 
 ```
-download this project and navigate to the project directory
-open cmd prompt
-run 'npm install'
-run 'node index.js authcookie_abcd' where authcookie_abcd is your authentication cookie. 
+1. download this project and navigate to the project directory
+2. open cmd prompt
+3. run 'npm install'
+4. run 'node index.js authcookie_abcd' where authcookie_abcd is your authentication cookie. 
 ```
 
 ## Getting your authentication cookie:
 
 ```
-log into https://vrchat.com/home/
-press f12 on browser 
-click on Network
-filter on authtoken
-copy everything after '?authToken=' (for example: 'authcookie_abcd...')
-this is your authentication cookie
+1. log into https://vrchat.com/home/
+2. press f12 on browser 
+3. click on Network
+4. filter on authtoken
+5. copy everything after '?authToken=' (for example: 'authcookie_abcd...')
+6. this is your authentication cookie
 ```
