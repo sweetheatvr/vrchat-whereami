@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body style="background-color:black; font-family: Sans-Serif; font-size: 24px;">
+ <div>
+    <span style="color:rgb(90, 255, 90);">Current World: </span>
+    <span style="color:white;" id="messages"></span>
+ </div>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script>
+    var socket = io();
+    socket.on('world-received', function(msg){
+        console.log('got world from server!');
+        document.getElementById('messages').innerHTML = msg;
+    });
+</script>
+</body>
+</html>

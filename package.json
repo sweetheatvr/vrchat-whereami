@@ -1,0 +1,19 @@
+{
+  "name": "vrchat-wherami",
+  "version": "1.0.0",
+  "description": "This program creates a local dynamic web page showing the current VRC map that the user is in.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "socket-io": "^1.0.0",
+    "socket.io": "^4.5.4",
+    "vrchat": "^1.11.0",
+    "websocket": "^1.0.34"
+  }
+}
