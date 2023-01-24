@@ -36,10 +36,18 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 ```
 ![image](https://user-images.githubusercontent.com/105096300/214435978-ec1f1b81-62ae-4865-a337-97923a997edb.png)
 
-# Streamlab settings 
+___
+___
+___
+
+# Extra Streamlab settings 
 
 ## Browser Source
 ![image](https://user-images.githubusercontent.com/105096300/214440399-14634165-47d9-4121-89b6-26a0297e758d.png)
 
 ## Filter (Color Key)
 ![image](https://user-images.githubusercontent.com/105096300/214440520-c223f098-01fe-4028-acab-c64574216f63.png)
+
+In Effect:
+![image](https://user-images.githubusercontent.com/105096300/214443734-61754271-fd6e-4659-9af2-770e5e4d4da4.png)
+
