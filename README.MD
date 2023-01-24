@@ -22,6 +22,3 @@ click on Network
 filter on authtoken
 copy everything after '?authToken=' (for example: 'authcookie_abcd...')
 this is your authentication cookie
-#� �v�r�c�h�a�t�-�w�h�e�r�e�a�m�i�
-�
-�
