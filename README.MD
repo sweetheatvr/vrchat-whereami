@@ -10,20 +10,20 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 
 ## Setup
 
-'''
+```
 download this project and navigate to the project directory
 open cmd prompt
 run 'npm install'
 run 'node index.js authcookie_abcd' where authcookie_abcd is your authentication cookie. 
-'''
+```
 
 ## Getting your authentication cookie:
 
-'''
+```
 log into https://vrchat.com/home/
 press f12 on browser 
 click on Network
 filter on authtoken
 copy everything after '?authToken=' (for example: 'authcookie_abcd...')
 this is your authentication cookie
-'''
+```
