@@ -14,7 +14,7 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 1. download this project somewhere!
 2. navigate to the project directory in cmd prompt
 3. run 'npm install'
-4. run 'node index.js authcookie_abcd' where authcookie_abcd is your authentication cookie. 
+4. run 'node index.js authcookie_abcd' where authcookie_abcd is your authentication cookie (see section below for getting auth cookie). 
 ```
 
 ## Getting your authentication cookie:
@@ -27,3 +27,4 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 5. copy everything after '?authToken=' (for example: 'authcookie_abcd...')
 6. this is your authentication cookie
 ```
+![image](https://user-images.githubusercontent.com/105096300/214435978-ec1f1b81-62ae-4865-a337-97923a997edb.png)
