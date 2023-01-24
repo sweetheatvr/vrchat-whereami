@@ -29,7 +29,7 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 ```
 1. log into https://vrchat.com/home/
 2. press f12 on browser 
-3. click on Network
+3. click on Network and press f5
 4. filter on authtoken
 5. copy everything after '?authToken=' (for example: 'authcookie_abcd...')
 6. this is your authentication cookie
