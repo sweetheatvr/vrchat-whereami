@@ -4,7 +4,7 @@ Nyallo! :3
 
 This program creates a local dynamic web page showing the current VRC map that the user is in.
 
-## Depedencies
+## Dependencies
 
 This requires you to get your VRChat Authentication cookie. I show you how to below!
 
