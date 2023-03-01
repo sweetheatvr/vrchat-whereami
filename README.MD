@@ -4,7 +4,7 @@ Nyallo! :3
 
 This program creates a local dynamic web page showing the current VRC map that the user is in.
 
-## Depedencies
+## Dependencies
 
 This requires you to get your VRChat Authentication cookie. I show you how to below!
 
@@ -28,13 +28,13 @@ This also requires nodejs installed on your machine https://nodejs.org/en/downlo
 
 ```
 1. log into https://vrchat.com/home/
-2. press f12 on browser 
-3. click on Network
-4. filter on authtoken
+2. press f12 to bring up your browser dev tools 
+3. click on Network and press f5 to refresh
+4. filter on 'authtoken' as shown below
 5. copy everything after '?authToken=' (for example: 'authcookie_abcd...')
 6. this is your authentication cookie
 ```
-![image](https://user-images.githubusercontent.com/105096300/214435978-ec1f1b81-62ae-4865-a337-97923a997edb.png)
+![image](https://user-images.githubusercontent.com/105096300/214447088-5b9dbaf4-06c5-4e5d-93f4-5b84fb432dae.png)
 
 ___
 ___
