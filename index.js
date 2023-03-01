@@ -1,71 +1,44 @@
-/*
-    Websocket Application to send current world name to client
-*/
-
-//base vrchat websocket url
-const base_websocket_url = "wss://pipeline.vrchat.cloud/?authtoken=";
-
-//all the imports
-const process = require('process'); //requried to process 
+// Import required libraries
 const WebSocketClient = require('websocket').client;
 const { Server } = require("socket.io");
-const vrchat = require("vrchat");
 const http = require('http');
-
-//create new express server
 const express = require('express');
+
+// Set the URL for the VRChat WebSocket server
+const base_websocket_url = "wss://pipeline.vrchat.cloud/?authtoken=";
+
+// Create an Express app, HTTP server, and Socket.IO server
 const app = express();
 const server = http.createServer(app);
+const io = new Server(server);
 
-var cookie = process.argv[2];
+// Set an initial world name
+let world = "this is a placeholder world name";
 
-//create new socket io server nya cool!
-const io = new Server(server)
+// Serve index.html when someone accesses the root
+app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 
-var world = "this is a placeholder world name";
+// When a client connects to the Socket.IO server, send the current world name
+io.on('connection', socket => io.emit("world-received", world));
 
-//send index.html to client when we hit our website home
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-  });
+// Start the server on port 3000
+server.listen(3000, () => console.log('listening on *:3000'));
 
-//on connection event send world name to client
-io.on('connection', (socket) => {
-    console.log('user connected to server');
-    io.emit("world-received", world);
-});
-
-//start doosh server on port 3000
-server.listen(3000, () => {
-    console.log('listening on *:3000');
-});
-
-//Connect to VRCHat websocket
+// Create a WebSocket client for the VRChat WebSocket server
 const vrchatClient = new WebSocketClient();
-vrchatClient.on('connect', function(vrcConnection) {
 
-    console.log('VRChat WebSocket Client Connected');
+// When the WebSocket client connects, listen for messages
+vrchatClient.on('connect', vrcConnection => vrcConnection.on('message', result => {
+  // Parse the message as JSON
+  if (result.type === 'utf8') {
+    const json = JSON.parse(result.utf8Data);
+    // If the message is about the user's location, update the world name and send it to the Socket.IO server
+    if (json.type === "user-location") {
+      world = json.content.substring(json.content.indexOf('"name":')+8,json.content.indexOf('","description"'));
+      io.emit('world-received', world);
+    }
+  }
+}));
 
-    //When VRChat sends the user a message
-    vrcConnection.on('message', function(result) {
-        if (result.type === 'utf8') {
-
-            var json = JSON.parse(result.utf8Data);
-
-            if (json.type == "user-location"){
-
-                var message = json.content;
-                
-                //booty parsing becuase the json is not well formed
-                world = message.substring(message.indexOf('"name":')+8,message.indexOf('","description"'));
-
-                console.log("Current World: " + world);
-
-                //send world name to all clients listening
-                io.emit('world-received', world);
-            }
-        }
-    });
-});
-
-vrchatClient.connect(base_websocket_url + cookie, null, null, { 'User-Agent': 'Mozilla/5.0' }, null);
+// Connect to the VRChat WebSocket server using an authentication token
+vrchatClient.connect(base_websocket_url + process.argv[2], null, null, { 'User-Agent': 'Mozilla/5.0' }, null);
